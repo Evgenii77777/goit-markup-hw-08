@@ -1,0 +1,215 @@
+.footer {
+  &.section {
+    background-color: $black-fone-color;
+  }
+
+  &-container {
+    text-align: center;
+    margin-bottom: 60px;
+    @media screen and (min-width: 768px) {
+      width: 45%;
+    }
+    @media screen and (min-width: 1200px) {
+      text-align: left;
+      margin-bottom: 0;
+    }
+  }
+
+  &-wrap {
+    @media screen and (min-width: 768px) {
+      display: flex;
+      justify-content: space-between;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 66%;
+    }
+  }
+
+  &-logo {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+
+    color: $accent-text-color;
+    &.span {
+      color: $white-text-color;
+    }
+  }
+}
+
+.container {
+  &.footer {
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}
+
+.adress {
+  &-text {
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+
+    color: $white-text-color;
+  }
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-link {
+    margin-bottom: 8px;
+    text-decoration: none;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+
+    color: rgba(255, 255, 255, 0.6);
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.icon {
+  margin-bottom: 60px;
+  align-items: center;
+  text-align: center;
+  @media screen and (min-width: 768px) {
+    width: 45%;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+    text-align: left;
+  }
+
+  &-text {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: $white-text-color;
+  }
+
+  &-list.footer {
+    padding-bottom: 0;
+    @media screen and (min-width: 1200px) {
+      justify-content: left;
+    }
+  }
+
+  &-item.footer {
+    margin-right: 10px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+  }
+
+  &-link.footer {
+    background-color: rgba(255, 255, 255, 0.1);
+    &:hover,
+    &:focus {
+      background-color: $accent-fone-color;
+    }
+  }
+
+  &-svg.footer {
+    fill: $white-text-color;
+  }
+}
+
+.email {
+  text-align: center;
+  align-items: center;
+  &-text {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $white-text-color;
+    @media screen and (min-width: 1200px) {
+      text-align: left;
+    }
+  }
+
+  &-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media screen and (min-width: 1200px) {
+      flex-direction: row;
+    }
+
+    input {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      padding-left: 15px;
+      width: 100%;
+      @media screen and (min-width: 768px) {
+        width: 450px;
+      }
+      @media screen and (min-width: 1200px) {
+        width: 358px;
+        margin-bottom: 0;
+        margin-right: 12px;
+      }
+      margin-bottom: 20px;
+      color: var(--accent-text-color);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      box-sizing: border-box;
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+      border-radius: 4px;
+      background: $black-fone-color;
+    }
+  }
+}
+
+.footer-button {
+  position: relative;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 29px;
+  width: 200px;
+  height: 50px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  text-align: left;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  color: $white-text-color;
+  background: $accent-fone-color;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  &::after {
+    content: "";
+    width: 24px;
+    height: 24px;
+    display: block;
+    background-image: url(../img/fotografy/iconsend.svg);
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+
+    position: absolute;
+    top: 12px;
+    left: 75%;
+  }
+}

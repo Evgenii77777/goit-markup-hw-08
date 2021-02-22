@@ -1,0 +1,245 @@
+.page-header {
+  position: relative;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &-list {
+    @media screen and (min-width: 768px) {
+      display: flex;
+      align-items: center;
+      margin: 0;
+      margin-left: auto;
+      padding: 21px 0;
+    }
+    margin: 0;
+    padding: 0;
+    padding-bottom: 306px;
+    list-style: none;
+  }
+
+  &-item {
+    @media screen and (min-width: 768px) {
+      margin: 0;
+      margin-right: 50px;
+      text-align: center;
+      align-items: center;
+      &:last-child {
+        margin-right: 0;
+      }
+      padding: 0;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+    }
+    margin-bottom: 35px;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &-link {
+    text-decoration: none;
+    color: $secondary-text-color;
+    height: 100%;
+    &:hover,
+    &:focus {
+      color: $accent-text-color;
+      transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    &.current {
+      color: $accent-text-color;
+      position: relative;
+      @media screen and (min-width: 768px) {
+        &::after {
+          position: absolute;
+          bottom: -33px;
+          left: 0;
+          content: "";
+          width: 100%;
+          display: block;
+          height: 4px;
+          background: $accent-fone-color;
+          border-radius: 2px;
+          @media screen and (min-width: 1200px) {
+            top: 35px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.nav-logo {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  text-decoration: none;
+  color: $accent-text-color;
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.17;
+  &.title {
+    color: $secondary-text-color;
+  }
+}
+
+.menu-container {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    z-index: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  display: none;
+  padding: 48px 40px;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $primary-fone-color;
+
+  &.is-open {
+    display: block;
+  }
+}
+
+.auth-list {
+  @media screen and (min-width: 768px) {
+    margin: 0;
+    margin-left: auto;
+    padding: 21px 0;
+    flex-direction: column;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column-reverse;
+  list-style: none;
+  padding-bottom: 64px;
+}
+
+.auth-item {
+  @media screen and (min-width: 768px) {
+    margin: 0;
+    margin-bottom: 10px;
+
+    padding: 0;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 30px;
+    margin-bottom: 0;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  margin-bottom: 32px;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+}
+
+.auth-link {
+  text-decoration: none;
+  color: $accent-text-color;
+  &:hover,
+  &:focus {
+    color: $accent-text-color;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    .auth-icon {
+      fill: $accent-text-color;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    color: $primary-text-color;
+    display: flex;
+    align-items: center;
+  }
+  &.mail {
+    &:hover,
+    &:focus {
+      color: $accent-text-color;
+      transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      .auth-icon {
+        fill: $accent-text-color;
+      }
+    }
+    @media screen and (min-width: 768px) {
+      margin: 0;
+      padding: 0;
+      font-size: 12px;
+      line-height: 1.17;
+      letter-spacing: 0.02em;
+      color: $primary-text-color;
+    }
+
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+
+    color: $primary-text-color;
+  }
+}
+
+.auth-icon {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  margin-right: 8px;
+}
+
+.social {
+  &-linnk {
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+    padding-left: 10px;
+    padding-right: 10px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+    transform: rotate(90deg);
+
+    color: #2196f3;
+
+    &:last-child {
+      padding-right: 0;
+      border: none;
+    }
+
+    &.first {
+      padding-left: 0;
+    }
+  }
+}
