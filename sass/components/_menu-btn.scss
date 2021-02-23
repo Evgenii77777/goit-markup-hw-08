@@ -8,7 +8,7 @@
   margin: 0;
   padding: 0;
   width: 40px;
-  @media screen and(min-width: 767px) {
+  @media screen and(min-width: 768px) {
     display: none;
   }
   height: 40px;
@@ -22,10 +22,12 @@
 }
 
 .menu-btn.is-open {
-  .icon-menu {
-    display: block;
-  }
-  .icon-close {
-    display: none;
+  @media screen and (max-width: 767px) {
+    .icon-menu {
+      display: block;
+    }
+    .icon-close {
+      display: none;
+    }
   }
 }

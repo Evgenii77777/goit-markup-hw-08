@@ -16,9 +16,11 @@
       margin-left: auto;
       padding: 21px 0;
     }
+    @media screen and (max-width: 767px) {
+      padding-bottom: 20%;
+    }
     margin: 0;
     padding: 0;
-    padding-bottom: 306px;
     list-style: none;
   }
 
@@ -97,7 +99,6 @@
   @media screen and (min-width: 768px) {
     display: flex;
     flex-direction: row;
-    position: static;
     z-index: 0;
     margin: 0;
     padding: 0;
@@ -106,18 +107,22 @@
   @media screen and (min-width: 1200px) {
     min-height: 80px;
   }
-  display: none;
-  padding: 48px 40px;
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  min-height: 100vh;
-  background-color: $primary-fone-color;
+  @media screen and (max-width: 767px) {
+    display: none;
+    padding: 48px 40px;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: $primary-fone-color;
+  }
 
-  &.is-open {
-    display: block;
+  @media screen and (max-width: 767px) {
+    &.is-open {
+      display: block;
+    }
   }
 }
 
@@ -127,6 +132,12 @@
     margin-left: auto;
     padding: 21px 0;
     flex-direction: column;
+  }
+  @media screen and (max-width: 767px) {
+    margin: 0;
+    margin-left: auto;
+    flex-direction: column;
+    padding-bottom: 10%;
   }
   @media screen and (min-width: 1200px) {
     display: flex;
@@ -138,7 +149,6 @@
   display: flex;
   flex-direction: column-reverse;
   list-style: none;
-  padding-bottom: 64px;
 }
 
 .auth-item {
