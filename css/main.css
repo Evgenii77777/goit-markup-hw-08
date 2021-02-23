@@ -114,12 +114,6 @@ img {
   }
 }
 
-@media screen and (max-width: 767px) {
-  .nav-list {
-    padding-bottom: 20%;
-  }
-}
-
 .nav-item {
   margin-bottom: 35px;
   font-weight: 500;
@@ -231,12 +225,13 @@ img {
   .menu-container {
     display: none;
     padding: 48px 40px;
-    position: fixed;
+    position: absolute;
     z-index: 1;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
+    min-height: 600px;
     background-color: #ffffff;
   }
 }
@@ -280,7 +275,6 @@ img {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding-bottom: 10%;
   }
 }
 

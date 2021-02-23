@@ -17,7 +17,6 @@
       padding: 21px 0;
     }
     @media screen and (max-width: 767px) {
-      padding-bottom: 20%;
     }
     margin: 0;
     padding: 0;
@@ -110,12 +109,13 @@
   @media screen and (max-width: 767px) {
     display: none;
     padding: 48px 40px;
-    position: fixed;
+    position: absolute;
     z-index: 1;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
+    min-height: 600px;
     background-color: $primary-fone-color;
   }
 
@@ -137,7 +137,6 @@
     margin: 0;
     margin-left: auto;
     flex-direction: column;
-    padding-bottom: 10%;
   }
   @media screen and (min-width: 1200px) {
     display: flex;
